@@ -1,26 +1,42 @@
 package hw.com;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+//循序搜尋法
+//用陣列存取亂數，再用Scanner存取輸入值，用for+while做判斷
+import java.util.Random;
+import java.util.Scanner;
 
 public class Sequential {
 
 	public static void main(String[] args) {
-		String M;
-		BufferedReader keyin = BufferedReader(new InputStreamReader(System.in));
-		int data[] = new int [100];
-		int i,j,find;
-		int val = 0;
-		for(i=0;i<80;i++)
-			data[i] = (((int)(Math.random()*150))%150+1);
-						
-		
-		
-	}
+		Random r = new Random();
+		int data[] = new int[10];
+		Scanner scanner = new Scanner(System.in);
+		int find = 0;
+		for (int i = 0; i < 10; i++) {
+			data[i] = (int) r.nextInt((10) + 1);
 
-	private static BufferedReader BufferedReader(InputStreamReader inputStreamReader) {
-		// TODO Auto-generated method stub
-		return null;
+		}
+		while (find == 0) {
+			System.out.println("請輸入比對數字:");
+			int num = scanner.nextInt();
+
+			for (int i = 0; i < 10; i++) {
+				if (data[i] != num) {
+					System.out.println("輸入值不再資料中");
+					
+				} else {
+					System.out.println("在第" + i + "個位置找到" + num);
+					find++;
+					break;
+					
+				}
+			}
+
+		}
+		for (int i = 0; i < 10; i++) {
+			System.out.print(data[i]+"\t");
+		}
+		
 	}
 
 }
