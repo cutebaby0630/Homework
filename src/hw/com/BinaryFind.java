@@ -2,7 +2,7 @@ package hw.com;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+//二分法
 public class BinaryFind {
 
 	public static void main(String[] args) throws IOException {
