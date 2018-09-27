@@ -1,6 +1,6 @@
 package hw.com;
 
-//循序搜尋法
+//循序搜尋法 完成
 //用陣列存取亂數，再用Scanner存取輸入值，用for+while做判斷
 import java.util.Random;
 import java.util.Scanner;
