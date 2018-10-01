@@ -1,34 +1,43 @@
 package hw.com;
 
 import java.util.Random;
-//選擇排序
+//選擇排序:反覆從未排序的數列中取出最小的元素，印出結果即為已排序的數列。
 public class Selection {
 
 	public static void main(String[] args) {
 		int min, temp;
 		Random r = new Random();
 		int data[] = new int[10];
+		
 		for (int i = 0; i < 10; i++) {
 			data[i] = (int) r.nextInt((50) + 1);
 
 		}
-		for (int i = 0; i < data.length; i++) {
-			// 初始化未排序序列中最小数据数组下标
-			min = i;
+		System.out.println("未排序數列:");
+		for (int i = 0; i < 10; i++) {
+			
+			System.out.print(data[i]+"\t");
 
+		}
+		System.out.println(" ");
+		for (int i = 0; i < data.length; i++) {
+			//未排序的數列中，最左邊的位置，與其他位置中的亂數做比較 
+			min = i;
 			for (int j = i; j < data.length; j++) {
-				// 在未排序元素中继续寻找最小元素，并保存其下标
+				// 比較後，較小的保留它的編號
 				if (data[j] < data[min]) {
 					min = j;
 				}
 			}
-
-			// 将未排序列中最小元素放到已排序列末尾
+			// 把最小數與比較中最左邊的數做交換
 			temp = data[min];
 			data[min] = data[i];
 			data[i] = temp;
 		}
+//		印出排序好的數列
+		System.out.println("已排序數列:");
 		for (int i = 0; i < 10; i++) {
+			
 			System.out.print(data[i]+"\t");
 
 		}

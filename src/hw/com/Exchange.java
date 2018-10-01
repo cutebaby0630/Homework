@@ -1,9 +1,9 @@
 package hw.com;
 
 import java.util.Random;
-//泡泡排序法
-public class Exchange {
 
+public class Exchange {
+//完成
 	public static void main(String[] args) {
 //		int n[] = { 51, 23, 6, 65, 15 ,89,100,1235,358};
 		Random r = new Random();
@@ -22,7 +22,7 @@ public class Exchange {
 			}
 		}
 		for(int num:n){
-			System.out.print(num + "\t");
+			System.out.print(num + "  ");
 		}
 	}
 
